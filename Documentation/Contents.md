@@ -28,4 +28,5 @@
     4. The Router Table Top
 3. Organization Chart
 4. References
-
+  - Appendix A - Resumés
+  - Appendix B - Miscellaneous Tables and Figures
