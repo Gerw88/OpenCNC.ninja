@@ -278,35 +278,37 @@ The only real disadvantage to using helical rack & pinions is it requires more t
 Accuracy:
 When talking about rack & pinion accuracy, it can be broken down into three components:  Backlash, Pitch Deviation and Tooth Quality.
 
-Backlash is the amount of clearance between the rack & pinion tooth flanks, and will depend on the type of rack selected and alignment accuracy between the rack and pinion.  The backlash can be eliminated completely by using a preloaded split-pinion or dual pinion drive system.
+#####Backlash
+is the amount of clearance between the rack & pinion tooth flanks, and will depend on the type of rack selected and alignment accuracy between the rack and pinion.  The backlash can be eliminated completely by using a preloaded split-pinion or dual pinion drive system.
 
-Pitch Deviation is the difference between the theoretical rack length and its actual length.  This varies depending on the rack quality selected and is shown as GTf per 300 mm length. Zero cumulative pitch deviation for long travels is available.
+#####Pitch Deviation
+is the difference between the theoretical rack length and its actual length.  This varies depending on the rack quality selected and is shown as GTf per 300 mm length. Zero cumulative pitch deviation for long travels is available.
 
-Tooth Quality is the accuracy that the tooth flanks are manufactured to, which affects the running precision and smoothness of the axis drive.  
-Soft rack & pinions have a quality level of ~AGMA 9 (DIN 9).  
-Induction-hardened rack & pinions have a quality level of ~AGMA 8 (DIN 10), due to deformation from the heat treatment process.  
-Quenched & Tempered rack & pinions have a quality level of ~AGMA 10 (DIN 8).  
-Hardened & Ground rack & pinions have a quality level of ~AGMA 12 (DIN 6), since the teeth are precision ground.  For high accuracy applications, a precision rack, such as the Hardened & Ground, should be used.
-Lubrication:
+#####Tooth Quality
+is the accuracy that the tooth flanks are manufactured to, which affects the running precision and smoothness of the axis drive.  
+- Soft rack & pinions have a quality level of ~AGMA 9 (DIN 9).  
+- Induction-hardened rack & pinions have a quality level of ~AGMA 8 (DIN 10), due to deformation from the heat treatment process.  
+- Quenched & Tempered rack & pinions have a quality level of ~AGMA 10 (DIN 8).  
+- Hardened & Ground rack & pinions have a quality level of ~AGMA 12 (DIN 6), since the teeth are precision ground.  For high accuracy applications, a precision rack, such as the Hardened & Ground, should be used.
+
+#####Lubrication:
 With open gearing such as rack & pinions, lubrication is critical!  A thin film of grease or oil should always be on the contacting tooth flanks to ensure there is no metal-to-metal contact, which can damage the teeth.
-
 
-The Frame and Base
-
+###The Frame and Base
 The base and frame of a CNC router is the main structural element of the machine. The base and frame is what holds everything together. This is what will determine our motor placement and linear motion component placement along with everything else.
 
 The frame and base design will be determined partially by the materials and supplies that are available, the number of linear motion components and motors the budget allow etc. However, we need to become familiar with different designs so that you may buy parts that fit our design.
 
 When we look at other CNC router designs, you may notice that almost every unit is different. Although this is true, you can break down these designs into categories.
-The X-Axis Base and Frame 
+####The X-Axis Base and Frame 
 The X-axis frame should also act as the base for the machine as the X-axis should be the axis closest to the ground. This portion of the machine will perform 3 primary tasks.
-Act as the base for the machine 
-Support the X axis linear motion system
-Support the cutting table
+- Act as the base for the machine 
+- Support the X axis linear motion system
+- Support the cutting table
 
-Common designs for the base.
-
-Fully Supported Frame 
+##Common designs for the base.
+
+###Fully Supported Frame 
 The fully supported base is one of the best designs and is the design used on most industrial or professional routers.
 
 This shows only the base and does not show the gantry
@@ -319,15 +321,17 @@ We are not talking about massive amounts of flex. This all ties back to our mach
 There are drawbacks with this design, the cost. We will need multiple LM components & motors (2 x linear guides, 2 x LM drive mechanisms and 2 x motors). We could employ a fully supported frame design with one motor using a pulley and belt system, but we would need to make sure the motor is up to the task. With this design we can get away with a lighter material as it will be supported against the ground or some other structure. 
 
 
-Fully Supported Bearing Rods/Rails 
+###Fully Supported Bearing Rods/Rails 
 When we say “fully supported” in this section, we mean there is no obstruction sweeping across that axis during operation.
 
 It is possible to have a fully supported linear bearing system and not have a fully supported frame. You can see this in the Solsylva design below.
 
 
-Partially Supported X-axis Fully Supported Y-axis Frame
+~~Image Link Here. Partially Supported X-axis Fully Supported Y-axis Frame~~
 
 A common design is the partially supported X or Y-axis.
+
+~~Image Link Here. ~~
 
 The gantry would have an undercarriage that would connect the gantry to the lead screw. With this setup you could have a ‘fully supported’ linear rails or rods setup. However, the rods or rails would still be able to flex with the frame itself.
 
@@ -340,7 +344,7 @@ With the design above, even if the frame were made of solid aluminum (38mm x 110
 We see this would be an issue if we’re trying to design a machine to hold a tolerance of 0.0254mm in the Z-axis. It is true that the machine would flex as a whole and could be compensated. However, the machine could vibrate and bounce when cutting, creating lines in the work. If our machine has a relatively small X-axis span, this design works well and is probably the easiest to setup. There are other solutions.
 
 
-Partially Supported Y- axis Fully Supported X-axis 
+###Partially Supported Y- axis Fully Supported X-axis 
 Assume we have only one motor and lead screw for the X-axis and still wish to maintain a high tolerance on the machine. We could move the Y-axis gantry assembly inside the frame which would allow us to fully support the X-axis because the gantry would not cut under the X-axis frame. However in that situation, the Y-axis frame would not be fully supported.
 
 
@@ -353,24 +357,24 @@ The cutting bed would then be true to the machine.
 
 When we design or build the CNC router, we need to decide which is more important. Have the machine remain constant or have the cutting bed and the machine flex together. 
 
-Alternatives 
+###Alternatives 
 There are other alternatives when we build or design a CNC router. One way to obtain a fully supported router is to do away with the gantry undercarriage and have the lead screw connect at the top of the gantry, or have 2 lead screws high on each side. We can see this application in the Solsylva designs. 
 
 However, with a single lead screw up high above the gantry, it makes access to the cutting bed somewhat difficult. This design works well for smaller machines that are mobile. For instance, a CNC router designed to carve shapes on wood flooring.
 
 The Mobile bed design would not be suitable in our case as the footprint of the machine would be too large.
 
-Other Considerations 
+###Other Considerations 
 When we design and build the CNC router, the material we use to construct the frame will play a big role in the design of the frame.
 
 Different materials will deform differently. Keep the material consideration in mind as we choose a frame design. Most popular materials are:
-MDF
-Plywood
-Aluminum Stock
-Structural aluminum profiles.
-Steel
+- MDF
+- Plywood
+- Aluminum Stock
+- Structural aluminum profiles.
+- Steel
 
-The Gantry (Y-Axis) Design Considerations
+###The Gantry (Y-Axis) Design Considerations
 The gantry design is the most popular design in the CNC router community. It is popular for a reason: it works. 
 
 The gantry design is a proven design for CNC routers. However, there are still many things that we should be aware of.
@@ -381,53 +385,52 @@ In order for you to be able to design and build your gantry to meet the required
 
 Let’s take a look at the forces evolved with a do it yourself CNC router gantry
 
-
-Side view of a typical CNC router gantry.
+~~Image Link Here. Side view of a typical CNC router gantry.~~
 
 We will briefly cover the following (A full technical explanation of CNC Router Forces will be covered in a separate document). 
-Center of gravity/mass
-Forces 
-Moment
+- Center of gravity/mass
+- Forces 
+- Moment
 
 Let’s identify the labels above: 
-D1 = the distance between the cutting tool (the router bit) and the center between the two Y-axis linear bearing rods/rails (D3). 
-D2 = distance between lead screw/ linear bearings and the bottom Y-axis linear bearing rail/rod. 
-D3 = distance between the lower and upper Y-axis linear bearing rods/rails. 
-D4= distance between the 2 linear bearings that sit on the X-axis linear bearing rods/rails. 
+- D1 = the distance between the cutting tool (the router bit) and the center between the two Y-axis linear bearing rods/rails (D3). 
+- D2 = distance between lead screw/ linear bearings and the bottom Y-axis linear bearing rail/rod. 
+- D3 = distance between the lower and upper Y-axis linear bearing rods/rails. 
+- D4= distance between the 2 linear bearings that sit on the X-axis linear bearing rods/rails. 
 
 Now we will look at the forces evolved. This is the short answer (summary, the full technical explanation of CNC Router Forces will be covered in a separate document) 
-When we design or build the CNC router, keep the following in mind:
-Try and keep the distance between the X-axis lead screw and linear bearings, as close as possible to the bottom Y-axis linear bearing rods/rails. Or as close to the center distance between the top and bottom Y-axis linear rods/rails. (Minimize D2).
-Keep the spindle plunge arm on the Z-axis assembly as short as possible and make that arm out of rigid material to prevent flexing. A normal Z-axis arm travel is anywhere from 75 to 150mm. (Minimize D1).
-Calculate or estimate where the center of gravity of the gantry will be located, including the spindle. Design the gantry side arms to compensate and place the center of gravity (CG) between the front and back X-axis linear bearings per arm. (CG should be located at ½ D4 and as close to X-axis lead screw as possible).
-Maximize the distance between the upper and lower Y-axis linear bearing rods/rails but still allow for clearance under the bottom rod/rail for your max Z travel. (Maximize D3).
-Other considerations 
+
+###When we design or build the CNC router, keep the following in mind:
+
+- Try and keep the distance between the X-axis lead screw and linear bearings, as close as possible to the bottom Y-axis linear bearing rods/rails. Or as close to the center distance between the top and bottom Y-axis linear rods/rails. (Minimize D2).
+- Keep the spindle plunge arm on the Z-axis assembly as short as possible and make that arm out of rigid material to prevent flexing. A normal Z-axis arm travel is anywhere from 75 to 150mm. (Minimize D1).
+- Calculate or estimate where the center of gravity of the gantry will be located, including the spindle. Design the gantry side arms to compensate and place the center of gravity (CG) between the front and back X-axis linear bearings per arm. (CG should be located at ½ D4 and as close to X-axis lead screw as possible).
+- Maximize the distance between the upper and lower Y-axis linear bearing rods/rails but still allow for clearance under the bottom rod/rail for your max Z travel. (Maximize D3).
+
+###Other considerations 
 A good gantry design is one of the most crucial factors for a quality CNC router. As with all CNC routers, budget is a concern which means material are also a concern. Try and visualize and estimate the forces involved and make our CNC router design work with the materials we decide to use.
 
 Topics such as lead screw placement, motor placement, linear bearing attachments, etc. will be discussed further into this document, as they are all important consideration with CNC router project.
 
-The Z-axis assembly
-
+###The Z-axis assembly
 Below you can see two examples of Z-axis assemblies with the Y-Axis CNC Router Gantry in the background.
-
-
 
 It is important to consider the forces that are involved. That way, we can adjust our design and verify that it will meet our design requirements. However, in order to design and build our machine to meet our requirements, you first need to understand the forces involved.
 
+~~Image Link Here~~
 
+Forces on the Z- Axis Assembly.
 
-
-
-Forces on the Z- Axis Assembly
 Let’s interpret the above image. 
+
 The following explains the dimensions: 
-D1 = the vertical distance between the upper and lower Y-axis linear bearing rods/rails. 
-D2 = the vertical distance between the upper and lower sets of Z-axis linear bearings. 
-D3 = the length of the spindle attachment plunge arm. 
-D4 = the width of the Z-axis assembly.
-D5 = the horizontal distance between the Z-axis linear bearing rods/rails. 
-D6 = the thickness of the plunge arm
-D7 = the distance between the cutting force (approx., tip of the cutting tool) and 1/2 D2. 
+- D1 = the vertical distance between the upper and lower Y-axis linear bearing rods/rails. 
+- D2 = the vertical distance between the upper and lower sets of Z-axis linear bearings. 
+- D3 = the length of the spindle attachment plunge arm. 
+- D4 = the width of the Z-axis assembly.
+- D5 = the horizontal distance between the Z-axis linear bearing rods/rails. 
+- D6 = the thickness of the plunge arm
+- D7 = the distance between the cutting force (approx., tip of the cutting tool) and 1/2 D2. 
 
 Now that we understand what the dimensions are, let’s analyze the forces and moments.
 Forces and Moments on the Z-Axis Assembly 
@@ -456,7 +459,7 @@ D2 also has an effect while cutting along the X-axis. Take a look at the image t
 
 The cutting force causes another moment; Moment B.
 
-Moment B is the result of the cutting force being multiplied by the distance between the cutting force and ½ D2.
+````Moment B is the result of the cutting force being multiplied by the distance between the cutting force and ½ D2.````
 
 This moment will apply resulting forces on the Z-axis bearings. As the distance between these bearings (D2) increase, these forces will decrease. That is why it is best to maximize D2.
 
@@ -492,6 +495,6 @@ Similar to the vacuum table in appearance, the perforated table top is simple ye
 
 ###The "Disposable" table top
 The "The "Disposable" table top is actually one of my favorites. Especially if you are new to operating a CNC router. This table style, usually composed of one or two sheets of high density MDF board, are very useful even if you have some other table top installed. I can't tell you how awful it makes you feel when you cut into your brand new t-slot or vacuum table. Yes I know there are limit switches, touch off pad and sensors to prevent that type of mistake. However, you would be surprised at how often we "bypass" those features. The disposable bed can also... 
-Building your own CNC router table top
 
+###Building your own CNC router table top
 The CNC router table top on a homemade machine is a very important considerations. The budget usually pushes towards the MDF style cutaway table top, which I actually think is best because of its versatility. However, design of the table support and structure should *NOT* be overlooked.
