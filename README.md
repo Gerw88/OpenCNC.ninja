@@ -1,7 +1,7 @@
 ## OpenCNC.ninja
 
 #### General Description:
-[Check out the Summary to begin](Summary.md)
+[Check out the Summary to begin](Documentation/Summary.md)
 
 #### Team Members:
 - Ian Foreman
