@@ -135,3 +135,37 @@ The advantage of building with plastics is the reduction in weight. From the dat
 The Mechanical Subsystem of a CNC provides the means needed to cut and machine various materials for a given job.  The choice of materials has a direct impact on performance, precision, repeatability, longevity, of the complete system.
 
 The mechanical subsystem is comprised of the guide system, the drive system, and the frame housing structure.  Each of these systems has a direct impact on the aforementioned qualities of a CNC.
+
+###Guide Rail Design
+The linear motion system (LM) plays a vital role in any linear CNC machine, and CNC routers are no exception. Without these systems coupled with a drive system, a CNC router would be of little use.
+
+The LM is responsible for three primary tasks. 
+1. Support Machine Components
+2. Guide the machine in a precise linear motion with minimal friction
+3. Support secondary loads (Torque, Lateral Loads, etc.) 
+
+A complete LM is a combination of a drive system and linear bearing system. However in this section, this term is referring to the linear bearing assemblies and the associated parts.
+
+A LM is composed of some type of linear bearing and the linear bearing guides. There are a number of types of bearings and guides, each with advantages and disadvantages. Because of the importance of this system, it is vital to be knowledgeable about the linear motion LM components. 
+
+###Supporting Machine Components
+The LM system must be able to handle the weight of the components while transporting it along a linear distance and maintaining linearity. For example, the gantry on a CNC router is supported on a LM system and is able to move along the X-axis. The LM system must support the weight of the gantry and still provide a low friction motion.
+
+###Providing Precise Linear Motion
+While supporting a load, the LM system must also provide a precise linear motion with minimal friction. This is the primary task of a LM system. The type of LM system directly relates to the accuracy or a CNC router. A “sloppy” linear motion system leads to a “sloppy” CNC machine. That is why it is important to have the correct LM system installed on each axis.
+
+###Supporting Secondary Loads
+Aside from supporting the weight of the machine, LM systems must also be able to support secondary loads such as torque or lateral loads, depending on the setup. Some applications of LM systems require only one dimensional load ratings, such as supporting a vertical load like weight. Other applications require multi-dimensional load ratings. For example, the LM system of the Y-axis on a CNC router is required to support the vertical loads caused by the weight of the Z-axis assemble, and also support torsion forces cause by the cutting action.
+
+Every LM system is rated for certain loads and certain applications. Choosing or identifying the right system for our CNC profiler is vital.
+
+###Categories of LM Systems
+We can categorize linear motion systems into 2 categories: 
+- Fully Supported Systems
+- Partially/End Supported Systems
+
+Fully supported LM systems are supported throughout the entire length of the system. This type of system can usually support more load without sacrificing linear precision due to deflection. Our goal is to have fully supported LM systems on the X and Y-axis while using end supported systems on the Z-axis. As the length of an axis increases the more vital it is to have a fully supported system. Examples of these systems include linear rails and guide blocks as well as track rollers. 
+
+Partially or end supported LM systems are just what they seem. These systems are supported on their ends. These systems are prone to flex and deformation because of the machine weight or the forces applied. However, these systems are more suitable in some applications. The most common type of end supported LM system is the linear rod and bushing setup.
+
+Of course each category contains many different types of linear motion systems. 
