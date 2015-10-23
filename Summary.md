@@ -1,9 +1,9 @@
 ##Summary:
 
-The CNC Machine is a system that can be used not only by manufacturers but also by small scale shops. It has been designed with these features. 
-Microcontroller system to send and receive information 
-Driver system to run machine at desired specifications 
-Mechanical system to support weight of gantry while in motion or idle plus the weight of the attached tool heads & handle deflection. 
+The CNC Machine is a system that can be used not only by manufacturers but also by small scale shops. It has been designed with these features:
+- Microcontroller system to send and receive information 
+- Driver system to run machine at desired specifications 
+- Mechanical system to support weight of gantry while in motion or idle plus the weight of the attached tool heads & handle deflection. 
 
 This machine should display these characteristics 
 Multiple forms of communication either through parallel port, Ethernet, or USB.
