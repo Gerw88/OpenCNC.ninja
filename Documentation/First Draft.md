@@ -119,3 +119,7 @@ Several materials including some metals, steel and aluminum, and a range of plas
 Comparing metals and plastics is not easy as metals have a much higher strength and modulus of elasticity, but also have a greater weight and are more difficult to machine. It’s interesting to note that both steel and aluminum have similar stiffness to weight properties indicated by the ratio E/ρ, while the high grade aluminum has a significant advantage in strength to weight. 
 
 The advantage of building with plastics is the reduction in weight. From the data (Materials Comparison) the polyethylene, both HDPE and UHMW PE, and polypropylene plastics were the lightest with densities of 0.90-0.96g/cm3. Another benefit of plastics is easier machining as drilling and cutting processes do not significantly wear on the blades and bits. Good strength and stiffness properties are available in plastics as well. When nylon is reinforced, it has some excellent properties, as does the acetal, Delrin. However, comparing the costs, HDPE and polypropylene are the most economical choices and due to their low densities they have strength to weight ratios very near to that of steel.
+
+| Material | E (10^6psi) | Sy (ksi) | ρ (g/cm^3) | E/ρ | Sy/ρ | Hardness | Cost of 1/2"x24"x48" sheet |
+|:---------|:------------|:---------|:-----------|:----|:-----|:---------|:---------------------------|
+| Steel A36 (18) | 29 | 36 | 7.85 | 3.69 | 4.6 | |  3/16” 64.32 (19) |
