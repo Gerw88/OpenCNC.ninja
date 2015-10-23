@@ -106,3 +106,16 @@ The stepper motors in all of ShopBot's PRS tools are made by the Japanese manufa
 
 The OM alphaStep stepper motor/driver is the system we use in our PRSalpha tools.  The alphaStep combines the best of stepper and servo capabilities in a robust and technologically sophisticated system that has been virtually failure-free in the four years that we have been shipping them in our alpha tools. 
 
+###Materials Review for Frame
+A variety of materials have been used in the building of CNC machines. In comparing the materials there are a number of selection factors that need to be reviewed. 
+- CNC frame materials need to have some strength in order to support the weight of the gantry and the cutting head as well as withstand forces resulting from the milling process. 
+- Stiffness is also required to prevent any deflections due to both static forces and dynamic forces resulting from the acceleration of the tool head. 
+- Weight is also important because the mass of the frame contributes to both the static and acceleration forces. 
+
+The best frame material would accomplish all three and offer excellent machinability and be available at a low cost.
+
+Several materials including some metals, steel and aluminum, and a range of plastics that include high density polyethylene (HDPE), ultra high molecular weight polyethylene (UHMW PE), polypropylene, polycarbonate, nylon, and Delrin (acetal) have been researched. Their properties are tabulated (see Materials Comparisons) in order to compare their characteristics and assess their applicability as a CNC frame material. The properties that were gathered include the modulus of elasticity, yield strength, and density. The ratio of the modulus of elasticity to density was calculated to give an indication of stiffness and the ratio of yield strength to density was found to give a strength value relative to weight. For steel and aluminum the thickness is indicated in the table while the width and length remained the same.
+
+Comparing metals and plastics is not easy as metals have a much higher strength and modulus of elasticity, but also have a greater weight and are more difficult to machine. It’s interesting to note that both steel and aluminum have similar stiffness to weight properties indicated by the ratio E/ρ, while the high grade aluminum has a significant advantage in strength to weight. 
+
+The advantage of building with plastics is the reduction in weight. From the data (Materials Comparison) the polyethylene, both HDPE and UHMW PE, and polypropylene plastics were the lightest with densities of 0.90-0.96g/cm3. Another benefit of plastics is easier machining as drilling and cutting processes do not significantly wear on the blades and bits. Good strength and stiffness properties are available in plastics as well. When nylon is reinforced, it has some excellent properties, as does the acetal, Delrin. However, comparing the costs, HDPE and polypropylene are the most economical choices and due to their low densities they have strength to weight ratios very near to that of steel.
