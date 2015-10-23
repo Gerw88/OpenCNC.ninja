@@ -199,3 +199,299 @@ We will be looking at 3 main type of drive systems, however there are some chara
 
 ###Essentials
 There are a few criteria for selecting a drive system (Leadscrew) that should never be overlooked. Choosing the correct, diameter and lead are the most basic and crucial but there are other factors to consider as well.
+
+Weights
+We must know or be ready to estimate the weights of the individual moving assemblies. This is important. We will use these values to calculate the loads that the drive system must withstand.
+Velocity and Acceleration
+We must know the desired velocity at which we want your assembly to move. This is usually in Millimeters per minute (mm/min). We must also know the desired acceleration in meter per second squared (m/s2), or the time at which you want to reach your goal velocity. It is much easier to estimate the time to reach velocity. E.g., we would like the machine to reach 5080 mm/min in .4 seconds.
+Length/Span
+You must know the total length or span of each Leadscrew. It would also be helpful to know the maximum distance that the nut could be from the bearing support on each axis.
+Bearing Supports and End mounting
+At this point of the design we may have some idea as to how we will secure the lead screw to the machine. Actually, it is best to fully understand how the different end mounting types will affect the outcome of your machine before choosing.
+
+There are four primary types of bearing supports. Reference the image below, which represents the four bearing end mounting types. Shown least to greatest rigidity, from the top down.
+
+
+Bearing Support Types
+Critical Speed
+Critical speed refers to the RPM at which the natural frequency of a rotating shaft begins. This vibration, also called resonance, will occur regardless to the orientation of the leadscrew. The critical speed also applies to rotating nuts about a lead screw.
+Column Strength
+Column strength refers to the maximum load a lead screw can withstand in compression before failing. Compression loads that exceed the column strength will cause the lead screw to buckle, or bend. Even the slightest bend can ruin a leadscrew.
+Back Lash and Back Driving
+Back lash and back driving are both concerns that need to be understood and addressed:
+Back-Lash
+The technical definition of backlash (lash) is the amount of free movement between the nut and the lead screw without rotation of the nut. In short terms, it is the ‘play’ between the nut and lead screw. If you take a nut and thread it on a bolt or threaded rod, you should be able to pull and push on the nut along the bolts length and feel slight movement. The lash is a factor that may reduce repeatability and accuracy in a machine.
+The lash is usually referred to as back lash because of when the lash affects the machine. If the CNC machine only moved in one direction, the gap between the nut and lead screw threads would always be compressed and would not affect the machine. Reference the image to the left.
+
+In normal operation without an anti-back lash nut, the lash allows the lead screw to rotate slightly without engaging the nut. This means that the desired position is lost.
+
+The lash between a nut and lead screw will increase as they wear. This is why most acme nuts used on CNC routers are wear compensation anti-backlash nuts. 
+
+There is also radial or transverse back lash. This can be noticed by trying to rotate the nut perpendicular to the lead screw axis. Again, this may be minimized by anti-back lash nuts. Also, increasing the length of the nut will help.
+Back Driving (Creep)
+Just as lead screws can convert rotary motion into linear motion they can also convert linear motion into rotational motion. This conversion from a linear force into rotational force is what is known as back driving or creep in the CNC industry. ACME screws are often considered to be self-locking, meaning back driving is not an issue. However if the efficiency of the lead screw is sufficient, then back driving may still occur. Generally, any linear motion system with efficiency greater than 50% may back drive or creep.
+Furthermore, vibration may assist the system to back drive. Systems that typically would not creep may if vibration occurs. For us, this primarily affects the z-axis system. The combination most attributing to back drive is a z-axis servo driven system with a ball screws or rack and pinion. Because gravity affects the z-axis system, counterbalance or springs are usually used to deal with back driving issues. A very efficient system will drive itself into the bed or piece if power is lost and there is no braking or counterweight system.
+Also, back driving may occur on a smaller scale only causing enough position loss to ruin the project. It is vital to keep this in mind when doing our design. Even if using acme screws, leave some room in the design for an anti-back driving system (springs etc.). The simplest approach is to use a low lead acme system for the z axes.
+Threaded rod and drive nut systems (Leadscrews)
+Since CNC machines require linear movement in multiple axes, multiple screw systems are most often used to accomplish this goal. These systems offer a simple and compact means of transmitting power and motion with excellent reliability. For these machines motors generating linear motion and thrust on the nut turn the screws. There are two main types of screws, and both power screws and ball screws operate in this way. However, the differences arise in the efficiency with which this motion is transmitted, the friction loss, the allowable rotational speed, and the required linear speeds. Before these differences are discussed it is necessary to explain the specifics of each type of screw.
+Power Screw (ACME) versus Ball Screw:
+Power screw is a general term for screws that transmit motion to threaded nuts using a variety of thread shapes. The threads used include ACME, show in Figure 2-1, and metric trapezoidal (Ball screws) among others. The trapezoid or squared thread shape allows for smoother rotation without the clapping force that is present in fastener threads. Most power screws are made from steel and nuts are made from bronze and plastics to reduce friction.  
+As seen in Figure 22, ball screws use ball bearings between the threads of the nut and screw. These ball bearings travel a continuous path through the nut providing rolling contact and reducing friction. Some ball screws offer multiple ball circuits distributing the load and improving reliability. 
+
+ ACME Power Screw			 Ball Screw
+
+Both types of screws are available in various leads and with multiple starts. The lead of a screw gives the linear travel of the nut for every revolution of the screw.  The speed of the linear advance is determined by dividing the rpm by the lead.  When a lead is increased and the helical threads are lengthened, gaps would be left between individual threads. This is when multiple start geometry is utilized. 
+
+A screw with multiple starts indicates that there is more than one thread running down the length of the screw filling the gaps between threads that would otherwise be present in high lead screws. The linear speed requirement of the system is used to determine both the rpm and the lead. A screw with a high lead can be rotated more slowly to produce a given linear speed while a screw with a lower lead must be rotated faster to create the same linear velocities.  However, each type of screw has limits on the rpm they are capable of operating at and the leads that they are manufactured in. In this case, other factors must be analyzed, and together, the system requirements specify the best type screw for the machine. 
+
+The type of contact between the nut and screw determines most of the screw characteristics. A power screw such as ACME uses a screw to nut contact resulting in sliding friction.  While the coefficient of friction depends on the part materials, it is generally higher than that of ball screws, which have rolling contact provided by the ball bearings. This friction results in a loss of torque transmitted and lower output efficiency for ACME lead screws. 
+ACME lead screws have efficiencies that range from 20-30%, while ball screws transmit motion with over 90% efficiency.  This friction significantly impacts the system, but most important is the increase in the required drive motor torque. If the system requires high speeds, then motors must be much larger, increasing cost and adding weight. Also, the low efficiency of ACME screws converts a majority of that torque into heat. For these reasons, ACME screws are limited to speeds below 300 rpm with most applications below 100 rpm. 
+ 
+However, with improved nut materials, these negatives can be reduced making power screws more attractive. The sliding contact of ACME threaded screws that reduces its allowable speeds also creates its many advantages. Most importantly, the larger friction force allows the screw to self-lock and keep any thrust load from being converted to torque and back driving the motor. Ball screws will experience free linear motion of the nut, known as backlash, unless a preloaded nut or double nut or some type of brake is used.  This can create complexity in the design and increase cost of the system, making ACME screws desirable when this is a significant problem. These screws are available with many different leads.  Higher leads provide for quick linear translation, but require greater rotational torque to move loads.  Smaller leads provide for precise positioning and require less rotational torque.  Due to the greater complexity of the ball nut, ACME screws generally have the advantage for low lead, high precision applications as they can be manufactured in leads as low as 0.5mm/rev. 
+
+Another consideration includes screw life and reliability. For this, the advantage belongs to the ball screws. Due to the extensive testing done with balls for roller bearings there are less unknowns than for ACME screws in which load, speed, lubrication, heat, and other factors must be taken into account.  The life of power screws depend greatly on the system variables where life for ball screws can be reasonably estimated from wear life calculations.
+
+In the process of selecting the best screw for a particular application, all of the system variables must be examined to determine what requirements must be met and which compromises can be allowed. If higher rotational speeds are needed, with the lower friction, less heat generation, and more efficient conversion of drive torques will require the use of ball screws. However, if simplicity, lower costs, self-locking, or high precision leads are the more desirable attributes, then power screws such as ACME are the more likely choice. 
+
+CNC machines currently on the market use both power screws and ball screws. Most of the lower end machines use power screws such as ACME threads for cost savings and design simplicity. However, as speeds increase and higher reliability requirements are desired, ball screws become more common. We are the ultimate judge on system practicality, and besides speed and accuracy requirements, the only concern in regards to the drive system is that it works now and continues to work for a reasonable length of time. 
+
+For many in this market, an ACME screw will provide excellent function and life that their usage will require. The small businesses and more active users will most likely desire ball screw drives and will be willing and capable of paying for its advantages. As with all purchases and design comparisons, all of the options must be weighed with the advantages, disadvantages, and costs of each in order to determine best drive mechanism for the system.   
+Rack & Pinion
+Rack and pinion is a design where teeth of a steel pinion gear are meshed into the teeth of a steel rack. The connection is metal on metal with grease applied, and sometimes the pinion will be a little softer so it will wear, since it is the easier component to change.
+
+Rack and pinion.
+Recent developments in preloading have revolutionized the overall performance and energy efficiency of rack-and-pinion drives. These advantages include long-term, backlash-free operation and unlimited travel length. Helical gearing is also an option which allows teeth to engage smoothly and quietly.
+
+Backlash between the rack and pinion can be a problem, and the pinion can ratchet out of the rack, so a tensioning system is needed to keep the pinion in the rack. The use of a split pinion also reduces the backlash.
+
+
+Split Pinion.
+There is major difference between the US/imperial specification and metric specifications on racks. Module is a metric pitch, inversely related to diametral pitch, e.g. Module = 25.4 / Diametral Pitch.
+
+Helical versus Straight.
+There are two styles of gear racks – Straight tooth, where the teeth are perpendicular to rack length, and helical tooth, where the teeth are at an angle to the rack length.  The helical style provides several key benefits over the straight style, including:
+Helical rack & pinions runs quieter than the straight, especially at high speeds
+Helical rack & pinions has a higher contact ratio (the number of effective teeth engaged) than straight, which increases the load carrying capacity
+Straight racks lengths are always a multiple of pi. E.g. 502.65 mm and 1005.31 mm.
+In most cases, helical rack & pinions cost the same as the straight rack & pinions!
+The only real disadvantage to using helical rack & pinions is it requires more time to set up and align properly.
+Accuracy:
+When talking about rack & pinion accuracy, it can be broken down into three components:  Backlash, Pitch Deviation and Tooth Quality.
+
+Backlash is the amount of clearance between the rack & pinion tooth flanks, and will depend on the type of rack selected and alignment accuracy between the rack and pinion.  The backlash can be eliminated completely by using a preloaded split-pinion or dual pinion drive system.
+
+Pitch Deviation is the difference between the theoretical rack length and its actual length.  This varies depending on the rack quality selected and is shown as GTf per 300 mm length. Zero cumulative pitch deviation for long travels is available.
+
+Tooth Quality is the accuracy that the tooth flanks are manufactured to, which affects the running precision and smoothness of the axis drive.  
+Soft rack & pinions have a quality level of ~AGMA 9 (DIN 9).  
+Induction-hardened rack & pinions have a quality level of ~AGMA 8 (DIN 10), due to deformation from the heat treatment process.  
+Quenched & Tempered rack & pinions have a quality level of ~AGMA 10 (DIN 8).  
+Hardened & Ground rack & pinions have a quality level of ~AGMA 12 (DIN 6), since the teeth are precision ground.  For high accuracy applications, a precision rack, such as the Hardened & Ground, should be used.
+Lubrication:
+With open gearing such as rack & pinions, lubrication is critical!  A thin film of grease or oil should always be on the contacting tooth flanks to ensure there is no metal-to-metal contact, which can damage the teeth.
+
+
+The Frame and Base
+
+The base and frame of a CNC router is the main structural element of the machine. The base and frame is what holds everything together. This is what will determine our motor placement and linear motion component placement along with everything else.
+
+The frame and base design will be determined partially by the materials and supplies that are available, the number of linear motion components and motors the budget allow etc. However, we need to become familiar with different designs so that you may buy parts that fit our design.
+
+When we look at other CNC router designs, you may notice that almost every unit is different. Although this is true, you can break down these designs into categories.
+The X-Axis Base and Frame 
+The X-axis frame should also act as the base for the machine as the X-axis should be the axis closest to the ground. This portion of the machine will perform 3 primary tasks.
+Act as the base for the machine 
+Support the X axis linear motion system
+Support the cutting table
+
+Common designs for the base.
+
+Fully Supported Frame 
+The fully supported base is one of the best designs and is the design used on most industrial or professional routers.
+
+This shows only the base and does not show the gantry
+The fully supported design means that both the Y and X axis may rest on the floor or some other structure. There is nothing connecting the gantry across the Y-axis. This allows for a very sturdy design and is not susceptible to the cutting table or the structure itself flexing under its own or external weight.
+
+In order for this system to flex or deform, the material itself would need to compress.
+
+We are not talking about massive amounts of flex. This all ties back to our machine tolerance decision, hence we should already have some idea as to the desired precisions and accuracy we want our machine to hold. A deformation of 0.0254mm is acceptable if we only expect a 0.254mm accuracy from our machine.
+
+There are drawbacks with this design, the cost. We will need multiple LM components & motors (2 x linear guides, 2 x LM drive mechanisms and 2 x motors). We could employ a fully supported frame design with one motor using a pulley and belt system, but we would need to make sure the motor is up to the task. With this design we can get away with a lighter material as it will be supported against the ground or some other structure. 
+
+
+Fully Supported Bearing Rods/Rails 
+When we say “fully supported” in this section, we mean there is no obstruction sweeping across that axis during operation.
+
+It is possible to have a fully supported linear bearing system and not have a fully supported frame. You can see this in the Solsylva design below.
+
+
+Partially Supported X-axis Fully Supported Y-axis Frame
+
+A common design is the partially supported X or Y-axis.
+
+The gantry would have an undercarriage that would connect the gantry to the lead screw. With this setup you could have a ‘fully supported’ linear rails or rods setup. However, the rods or rails would still be able to flex with the frame itself.
+
+The frame will only be supported on the ends since there must be clearance between the ground and the frame to allow the gantry undercarriage to move along the X-axis. In the image above, the Y-axis would be considered supported since you could have a frame that would not interfere with the gantry movement.
+
+The frame across the Y-axis would prevent flexing for that axis. This would mean the cutting bed would be very rigid in the Y-axis but could flex or deform along the X-axis.
+
+With the design above, even if the frame were made of solid aluminum (38mm x 110mm) and the X-axis span were 1524mm, the frame would ‘sag’  0.2540mm in the center, just under its own weight. That does not include the weight of the gantry or anything else.
+
+We see this would be an issue if we’re trying to design a machine to hold a tolerance of 0.0254mm in the Z-axis. It is true that the machine would flex as a whole and could be compensated. However, the machine could vibrate and bounce when cutting, creating lines in the work. If our machine has a relatively small X-axis span, this design works well and is probably the easiest to setup. There are other solutions.
+
+
+Partially Supported Y- axis Fully Supported X-axis 
+Assume we have only one motor and lead screw for the X-axis and still wish to maintain a high tolerance on the machine. We could move the Y-axis gantry assembly inside the frame which would allow us to fully support the X-axis because the gantry would not cut under the X-axis frame. However in that situation, the Y-axis frame would not be fully supported.
+
+
+We see in this design, the longer X-axis is fully supported (on the ground), however the gantry would cut through any frame in the Y-axis inside the cutting area.
+This means that no matter how much weight we put on the gantry or cutting table (not pictured), the X-axis frame would only deform if the material itself deformed.
+
+With this design, the cutting bed would need to have its own frame and could ‘sag’ in the center. However, the machine itself would be constant and once the cutting bed is installed, you could true the cutting table surface by planing the surface with the machine.
+
+The cutting bed would then be true to the machine.
+
+When we design or build the CNC router, we need to decide which is more important. Have the machine remain constant or have the cutting bed and the machine flex together. 
+
+Alternatives 
+There are other alternatives when we build or design a CNC router. One way to obtain a fully supported router is to do away with the gantry undercarriage and have the lead screw connect at the top of the gantry, or have 2 lead screws high on each side. We can see this application in the Solsylva designs. 
+
+However, with a single lead screw up high above the gantry, it makes access to the cutting bed somewhat difficult. This design works well for smaller machines that are mobile. For instance, a CNC router designed to carve shapes on wood flooring.
+
+The Mobile bed design would not be suitable in our case as the footprint of the machine would be too large.
+
+Other Considerations 
+When we design and build the CNC router, the material we use to construct the frame will play a big role in the design of the frame.
+
+Different materials will deform differently. Keep the material consideration in mind as we choose a frame design. Most popular materials are:
+MDF
+Plywood
+Aluminum Stock
+Structural aluminum profiles.
+Steel
+
+The Gantry (Y-Axis) Design Considerations
+The gantry design is the most popular design in the CNC router community. It is popular for a reason: it works. 
+
+The gantry design is a proven design for CNC routers. However, there are still many things that we should be aware of.
+
+From a design standpoint, we want our gantry to be stable and balanced. Design the CNC gantry to meet the forces that it will encounter. This will prevent excess stress and strain on you bearings, lead screw, motor, etc.
+
+In order for you to be able to design and build your gantry to meet the required forces, you first need to identify and understand the forces involved.
+
+Let’s take a look at the forces evolved with a do it yourself CNC router gantry
+
+
+Side view of a typical CNC router gantry.
+
+We will briefly cover the following (A full technical explanation of CNC Router Forces will be covered in a separate document). 
+Center of gravity/mass
+Forces 
+Moment
+
+Let’s identify the labels above: 
+D1 = the distance between the cutting tool (the router bit) and the center between the two Y-axis linear bearing rods/rails (D3). 
+D2 = distance between lead screw/ linear bearings and the bottom Y-axis linear bearing rail/rod. 
+D3 = distance between the lower and upper Y-axis linear bearing rods/rails. 
+D4= distance between the 2 linear bearings that sit on the X-axis linear bearing rods/rails. 
+
+Now we will look at the forces evolved. This is the short answer (summary, the full technical explanation of CNC Router Forces will be covered in a separate document) 
+When we design or build the CNC router, keep the following in mind:
+Try and keep the distance between the X-axis lead screw and linear bearings, as close as possible to the bottom Y-axis linear bearing rods/rails. Or as close to the center distance between the top and bottom Y-axis linear rods/rails. (Minimize D2).
+Keep the spindle plunge arm on the Z-axis assembly as short as possible and make that arm out of rigid material to prevent flexing. A normal Z-axis arm travel is anywhere from 75 to 150mm. (Minimize D1).
+Calculate or estimate where the center of gravity of the gantry will be located, including the spindle. Design the gantry side arms to compensate and place the center of gravity (CG) between the front and back X-axis linear bearings per arm. (CG should be located at ½ D4 and as close to X-axis lead screw as possible).
+Maximize the distance between the upper and lower Y-axis linear bearing rods/rails but still allow for clearance under the bottom rod/rail for your max Z travel. (Maximize D3).
+Other considerations 
+A good gantry design is one of the most crucial factors for a quality CNC router. As with all CNC routers, budget is a concern which means material are also a concern. Try and visualize and estimate the forces involved and make our CNC router design work with the materials we decide to use.
+
+Topics such as lead screw placement, motor placement, linear bearing attachments, etc. will be discussed further into this document, as they are all important consideration with CNC router project.
+
+The Z-axis assembly
+
+Below you can see two examples of Z-axis assemblies with the Y-Axis CNC Router Gantry in the background.
+
+
+
+It is important to consider the forces that are involved. That way, we can adjust our design and verify that it will meet our design requirements. However, in order to design and build our machine to meet our requirements, you first need to understand the forces involved.
+
+
+
+
+
+Forces on the Z- Axis Assembly
+Let’s interpret the above image. 
+The following explains the dimensions: 
+D1 = the vertical distance between the upper and lower Y-axis linear bearing rods/rails. 
+D2 = the vertical distance between the upper and lower sets of Z-axis linear bearings. 
+D3 = the length of the spindle attachment plunge arm. 
+D4 = the width of the Z-axis assembly.
+D5 = the horizontal distance between the Z-axis linear bearing rods/rails. 
+D6 = the thickness of the plunge arm
+D7 = the distance between the cutting force (approx., tip of the cutting tool) and 1/2 D2. 
+
+Now that we understand what the dimensions are, let’s analyze the forces and moments.
+Forces and Moments on the Z-Axis Assembly 
+Building a CNC router can be easy or hard. Some people over analyze and some people just build it and see if it works. I think the best approach is a mix of the two methods. So let’s first try and understand what is happening.
+
+The above image illustrates an example of a Z-axis assembly shown in a front view and a side view. Look at the front view and notice that the Z-axis assembly is moving to the right while it rides on the Y-axis linear bearing rails/rods.
+
+The plunge arm is at max Z travel and is cutting into a material as it moves from left to right. This cutting action produces a cutting force that opposes the movement of the Z-axis assembly.
+
+The cutting force is a variable of spindle RPMs, the number of flutes on the cutting tool, the feed rate, and the material that is being cut.
+
+For now, just understand that there is a force in the opposite direction than the Z-axis assembly is moving. Now let’s see what happens because of this cutting force.
+
+The cutting force creates a moment, which is illustrated in the image above as Moment A. (A moment is just a force that is applied at a distance).
+ 
+````Moment A = D6 x Cutting Force.````
+
+ Moment A torques the plunge arm in the opposing direction of the cutting force, which torques the whole Z-axis assembly.
+ 
+This moment results in resultant forces that are applied to the Z-axis linear bearing rails/rods and the Z-axis linear bearings themselves. (Yellow arrows)
+
+As D5 and D2 increase in length, the resulting forces decrease. You can see that when we are designing or building a CNC router, it is important to maximize the horizontal distance between the Z-axis linear rails (D5), and the vertical distance between the Z- axis linear bearing blocks.
+
+###The Plunge Arm 
+D2 also has an effect while cutting along the X-axis. Take a look at the image to the left.
+
+The cutting force causes another moment; Moment B.
+
+Moment B is the result of the cutting force being multiplied by the distance between the cutting force and ½ D2.
+
+This moment will apply resulting forces on the Z-axis bearings. As the distance between these bearings (D2) increase, these forces will decrease. That is why it is best to maximize D2.
+
+As a rule of thumb when building a CNC router, D2 should never be any less than half the length of the plunge arm. Also, we want the thickness if the plunge arm (D6) to be thick enough to not flex under our maximum cutting force.
+
+The flex will depend on the maximum cutting force we are designing our machine around, the thickness of the material (D6), plunge arm length (D3), and the material it is made of.
+
+###Summary 
+Keep the following in mind when you design or build a CNC router: 
+
+- Maximize D1, reduces the forces due to torque caused by the cutting force in the X-axis.
+- Maximize D2 reduces the forces due to torque caused by the cutting force in the X-axis. 
+- Minimize D3, but still allow for your desired Z-axis travel. 
+- Maximize D4, reduces the forces due to torque caused by the cutting force in the Y-axis. 
+
+###Other Considerations 
+Other features such as lead screws, motor placement, linear bearings etc. all have an input here.
+
+
+###The Router Table Top
+The CNC router table top is where the cutting magic happens. The table top, also called the cutting bed, can make the life of a CNC router operator enjoyable or a nightmare.
+
+For example, if we are in the prototyping business, we will probably be working with all kinds of materials and shapes. This would probably push you towards a T-slot style, which offers numerous clamping options. On the other hand, you might produce the same type of product on a daily basis which would push you towards a different style. On some CNC router tables we may find a combination of different types of cutting table tops. 
+
+###The T-Slot table top
+The T-slot table is often seen on traditional CNC milling machines. However, these are usually made of tooling steel and are extremely heavy. The T-slot tables found on CNC routers are usually made of extruded aluminum. There are many advantages to the T-slot type table. 
+
+###The Vacuum table top
+The vacuum style CNC router table top is often found on higher end models. They can be very useful for many applications. However, there are drawbacks. For example the...
+
+###The Perforated table top
+Similar to the vacuum table in appearance, the perforated table top is simple yet affective. Much cheaper than a T-slot style bed, yet offers similar performance. The perforated table offers a lot as far as...
+
+###The "Disposable" table top
+The "The "Disposable" table top is actually one of my favorites. Especially if you are new to operating a CNC router. This table style, usually composed of one or two sheets of high density MDF board, are very useful even if you have some other table top installed. I can't tell you how awful it makes you feel when you cut into your brand new t-slot or vacuum table. Yes I know there are limit switches, touch off pad and sensors to prevent that type of mistake. However, you would be surprised at how often we "bypass" those features. The disposable bed can also... 
+Building your own CNC router table top
+
+The CNC router table top on a homemade machine is a very important considerations. The budget usually pushes towards the MDF style cutaway table top, which I actually think is best because of its versatility. However, design of the table support and structure should *NOT* be overlooked.
