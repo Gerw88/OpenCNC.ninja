@@ -14,3 +14,5 @@
     - Shopbot
     - ...
   3. Materials review for Frame
+  4. Mechanical Systems
+    1. Guide Rail Design
