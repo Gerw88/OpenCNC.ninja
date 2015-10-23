@@ -169,3 +169,33 @@ Fully supported LM systems are supported throughout the entire length of the sys
 Partially or end supported LM systems are just what they seem. These systems are supported on their ends. These systems are prone to flex and deformation because of the machine weight or the forces applied. However, these systems are more suitable in some applications. The most common type of end supported LM system is the linear rod and bushing setup.
 
 Of course each category contains many different types of linear motion systems. 
+
+###Profile Rail Guides
+Rails and guide blocks, also often referred to as simply linear guides, are high end linear motion systems. Profile guide block systems are another form of linear bearing system used to move a load along a straight path with as little resistance to the direction of motion as possible.
+
+These systems offer numerous advantages over other linear motion systems. Profile guide blocks and rail systems are, as the name suggests, composed of two primary components. The profile rail, which guides the guide blocks and provides a smooth and durable surface for linear motion, and the Guide Block which rides on the rail and supports the load that is to be moved. Think of it as a roller coaster, with the rail being the track and the block being the cars.
+
+There are several advantages to profile guide systems. They are very robust and accurate due to their construction. Most all guide block systems use ball bearings to roll the load along the rail, which means high efficiency. This high efficiency means less work must be done by the drive system to move the load. 
+
+This is the strongest and best performing rail design. These systems offer push, pull, and rotational/moment load resistance in many directions.
+
+###Round Shaft Railing
+ A precision machined steel rod is combined with a rectangular, aluminum bearing block that houses the recirculating bearing insert. There are a variety of mounting arrangements for this type of rail-and-bearing system (Fully supported shown left and end supported shown below). The single biggest problem with this design is that the bearings contact the rail on a single point. Over time the bearings will wear a groove in the rail along that point, which can start to develop lash and reduce performance. Also, as grooves wear into the rail, more debris gets past the seals and bigger problems can develop.
+ 
+###V-Rails
+This is one of the least expensive and weakest rail designs. In its simplest form, a piece of steel plate with a V profile is positioned with the V-point up, creating the riding surfaces. One, two or more V-bearing wheels with the matching V-profile are attached to the moving structure and ride on the V-rail. The weight of the moving structure is the only force maintaining the bearing wheel to rail connection. The stronger design includes V-profiles on the top and bottom edges of the V-rail. V-bearing wheels on the top and bottom secure the moving structure to the V-rail providing added strength and rigidity. Cutting and rapid feed rates will be slower and depth- per-pass will be smaller.
+
+The rails must be fastened with multiple fasteners to the supporting structure. The standard holes are spaced at 2 inch (51mm), 3 inch (76mm), or 4 inch (102mm) intervals depending on the rail size. 
+The accuracy of the system is dependent on the flatness, straightness and parallelism of the supporting structure. Most v‐roller applications do not require high accuracy. It is adequate in many applications to attach the rails directly to cold finished or extruded material. Rails are supplied with shoulders to mount against the square edges of plates or bars.
+
+For designs requiring accuracy levels of ±.13mm/300mm and better, the mounting surfaces must be prepared appropriately flat, straight, and parallel Reference edge assemblies should also be used. Greater accuracy can be obtained by fastening the rails to a plate or bar that has been prepared by milling or grinding the mounting surfaces flat and parallel.
+
+###Drive Designs
+The drive components are the mechanical components that "drive" the CNC machine along its axis. The most common components associated with a drive system are the motors, and either lead screws or rack and pinions. The whole idea of a drive system is to convert controlled rotary motion to controlled linear motion with the help of a CNC Controller.
+
+The drive system has a direct correlation to the machines capabilities. By understanding the CNC drive system, you have a much better understanding of a CNC machine. Just by changing a few components you can control the machines cutting speed, cutting force, precisions, and accuracy.
+
+We will be looking at 3 main type of drive systems, however there are some characteristics which need to be understood irrespective of the drive system used.
+
+###Essentials
+There are a few criteria for selecting a drive system (Leadscrew) that should never be overlooked. Choosing the correct, diameter and lead are the most basic and crucial but there are other factors to consider as well.
