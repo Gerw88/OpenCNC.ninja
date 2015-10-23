@@ -7,7 +7,7 @@ The system must cater for the occasional break-down and reassembly for relocatio
 ##Description
 A CNC machine is a system that is able to accept numerical control inputs to machine a part specified by the exact positioning of the inputs. The machine is able to accept commands through a directly connected personal computer. The personal computer communicates to the main controller subsystem through (one of the following) Ethernet, USB, or parallel link. The main controller subsystem is able to interpret and directly control movement of the attachable tool head/s. The framework of the system is set up by the mechanical subsystem which will allow for movement in the x, y, and z axes and specify spatial limitations of any acceptable job. The main controller, and mechanical subsystems are able to interact through power provided by the motor driver subsystem. The overall block diagram of the machine is pictured below.
 
-[](https://cloud.githubusercontent.com/assets/8729407/10703947/572c744a-79cb-11e5-8920-7bb6153bd51d.png)
+![](https://cloud.githubusercontent.com/assets/8729407/10703947/572c744a-79cb-11e5-8920-7bb6153bd51d.png)
 
 ##Subsystems
 
