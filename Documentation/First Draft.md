@@ -130,3 +130,8 @@ The advantage of building with plastics is the reduction in weight. From the dat
 | Polycarbonate | 0.32 | 9 | 1.2 | 0.27 | 7.5 | M70-82 | 151.60 |
 | Nylon 6/6 (30% glass reinforced)  | 1.3 | 25 | 1.25 | 1.04 | 20.0 | R101-119 | 272.78 |
 | Delrin (acetal)  | 0.46 | 9.5 | 1.42 | 0.32 | 6.7 | M80-90 | 372.50 |
+
+###Mechanical Systems
+The Mechanical Subsystem of a CNC provides the means needed to cut and machine various materials for a given job.  The choice of materials has a direct impact on performance, precision, repeatability, longevity, of the complete system.
+
+The mechanical subsystem is comprised of the guide system, the drive system, and the frame housing structure.  Each of these systems has a direct impact on the aforementioned qualities of a CNC.
