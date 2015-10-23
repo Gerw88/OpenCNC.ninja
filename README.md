@@ -1,6 +1,6 @@
 # OpenCNC.ninja
 
-### Team Members:
+#### Team Members:
 - Ian Foreman
 - Michael Foreman
 - Chris Brixey
